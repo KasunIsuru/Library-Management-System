@@ -19,3 +19,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container2">
+        <h2>Library Login</h2>
+        <form method="POST">
+            <label>Username:</label>
+            <input type="text" name="username" required><br>
+            <label>Password:</label>
+            <input type="password" name="password" required><br>
+            <button type="submit">Login</button>
+            <p><a href="register.php">Register</a></p>
+        </form>
+    </div>
+</body>
+</html>
