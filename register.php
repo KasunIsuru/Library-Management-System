@@ -11,5 +11,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
+    
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+        return;
+    }
+
+    $checkUsername = "SELECT * FROM user WHERE username='$username'";
+    $result = $conn->query($checkUsername);
+    if ($result->num_rows > 0) {
+        echo "Username already taken!";
+        return;
+    }
 }
 ?>
