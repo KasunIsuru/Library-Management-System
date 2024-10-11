@@ -30,3 +30,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Fine</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Fine Details</h2>
+        <form method="POST">
+            <label>Fine ID:</label>
+            <input type="text" name="fine_id" value="<?php echo $fine['fine_id']; ?>" readonly><br>
+            <label>Book ID:</label>
+            <input type="text" name="book_id" value="<?php echo $fine['book_id']; ?>" required><br>
+            <label>Member ID:</label>
+            <input type="text" name="member_id" value="<?php echo $fine['member_id']; ?>" required><br>
+            <label>Fine Amount:</label>
+            <input type="number" name="fine_amount" value="<?php echo $fine['fine_amount']; ?>" required><br>
+            <button type="submit">Update Fine</button>
+        </form>
+        <a href="view.php" class="button">Back</a>
+    </div>
+</body>
+</html>
