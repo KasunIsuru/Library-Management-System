@@ -23,5 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Username already taken!";
         return;
     }
+
+     $sql = "INSERT INTO user (user_id, email, first_name, last_name, username, password) 
+            VALUES ('$user_id', '$email', '$first_name', '$last_name', '$username', '$password')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Registration successful!";
+        header("Location: index.php"); 
+        exit();  
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;  
+    }
+
 }
 ?>
