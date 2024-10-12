@@ -1,8 +1,7 @@
 <?php
-// db.php
 $servername = "localhost";
-$username = "root"; // Default MySQL username for XAMPP
-$password = "";     // Default MySQL password for XAMPP (empty)
+$username = "root"; 
+$password = "";     
 $dbname = "library_system";
 
 // Create connection
