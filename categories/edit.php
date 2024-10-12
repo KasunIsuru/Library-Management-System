@@ -10,10 +10,10 @@ if (isset($_GET['category_id'])) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $category_id = $_POST['category_id'];
-    $category_name = $_POST['category_name'];
+    $category_Name = $_POST['category_Name'];
     $date_modified = date('Y-m-d H:i:s');
 
-    $sql = "UPDATE bookcategory SET category_name='$category_name', date_modified='$date_modified' WHERE category_id='$category_id'";
+    $sql = "UPDATE bookcategory SET category_Name='$category_Name', date_modified='$date_modified' WHERE category_id='$category_id'";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: view.php");
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label>Category ID:</label>
             <input type="text" name="category_id" value="<?php echo $category['category_id']; ?>" readonly><br>
             <label>Category Name:</label>
-            <input type="text" name="category_name" value="<?php echo $category['category_name']; ?>" required><br>
+            <input type="text" name="category_Name" value="<?php echo $category['category_Name']; ?>" required><br>
             <button type="submit">Update Category</button>
         </form>
         <a href="view.php" class="button">Back</a>
