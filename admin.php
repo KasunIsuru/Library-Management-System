@@ -12,68 +12,67 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Admin Dashboard</title>
-    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link to existing CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"> 
     <style>
-        /* Admin Dashboard Specific Styles */
         body {
-            background-color: #e9ecef; /* Light background for the admin dashboard */
+            background-color: #e9ecef; 
         }
 
         .container {
             width: 80%;
             margin: 20px auto;
             padding: 20px;
-            background-color: #ffffff; /* White background for the dashboard container */
+            background-color: #ffffff; 
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #343a40; /* Darker text color for headings */
+            color: #343a40; 
             text-align: center;
             margin-bottom: 20px;
         }
 
         h2 {
             font-size: 1.8rem;
-            color: #495057; /* Secondary text color */
+            color: #495057;
             text-align: center;
             margin-bottom: 30px;
         }
 
         nav ul {
-            list-style-type: none; /* Remove bullet points */
+            list-style-type: none;
             padding: 0;
-            text-align: center; /* Center the navigation links */
+            text-align: center;
         }
 
         nav ul li {
-            display: inline-block; /* Horizontal list */
-            margin: 0 5px; /* Reduced spacing between links */
+            display: inline-block;
+            margin: 0 5px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #007bff; /* Bootstrap primary color */
-            font-weight: bold; /* Bold links */
-            padding: 10px 15px; /* Adjusted padding for smaller button size */
-            border: 2px solid transparent; /* Border for hover effect */
+            color: #007bff;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 2px solid transparent;
             border-radius: 5px;
-            transition: all 0.3s; /* Smooth transition for hover effect */
+            transition: all 0.3s; 
         }
 
         nav ul li a:hover {
-            background-color: #007bff; /* Change background color on hover */
-            color: white; /* Change text color on hover */
-            border-color: #007bff; /* Match border with background color */
+            background-color: #007bff; 
+            color: white; 
+            border-color: #007bff;
         }
 
         .button {
             display: inline-block;
             padding: 10px 20px;
             margin-top: 20px;
-            background-color: #dc3545; /* Bootstrap danger color */
+            background-color: #dc3545; 
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -82,7 +81,7 @@ if (!isset($_SESSION['username'])) {
         }
 
         .button:hover {
-            background-color: #c82333; /* Darker red on hover */
+            background-color: #c82333; 
         }
     </style>
 </head>
